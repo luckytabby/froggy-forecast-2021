@@ -9,7 +9,10 @@ function displayWeather(response) {
     tempToUser.innerHTML = Math.round(response.data.main.feels_like);
 
     let humidityToUser = document.querySelector("#humidity");
-    humidityToUser.innerHTML = response.data.main.humidity
+    humidityToUser.innerHTML = Math.round(response.data.main.humidity);
+
+    let windSpeedToUser = document.querySelector("#windSpeed");
+    windSpeedToUser.innerHTML = Math.round(response.data.main.wind.speed);
 
 }
 
