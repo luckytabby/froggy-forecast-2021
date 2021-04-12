@@ -12,8 +12,10 @@ function displayWeather(response) {
     humidityToUser.innerHTML = Math.round(response.data.main.humidity);
 
     let windSpeedToUser = document.querySelector("#windSpeed");
-    windSpeedToUser.innerHTML = Math.round(response.data.main.wind.speed);
+    windSpeedToUser.innerHTML = Math.round(response.data.wind.speed);
 
+    let dateAndTimeToUser = document.querySelector("#dayAndTime");
+    dateAndTimeToUser.innerHTML = "Friday 5:00 pm";
 }
 
 let apiKey = "3fdbb0c1f67069bd33e76ea8a1295d83";
