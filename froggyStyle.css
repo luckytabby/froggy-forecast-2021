@@ -25,6 +25,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding: 0 40px;
 }
 
 #frog {
@@ -33,9 +34,9 @@ button:hover {
 }
 
 #frogAndForecast {
-  align-content: flex-start;
   display: flex;
   flex-direction: row;
+  margin: 30px 0 15px 0;
 }
 
 .header {
