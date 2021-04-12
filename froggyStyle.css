@@ -1,3 +1,26 @@
 body {
-  background-color: antiquewhite;
+  background-color: #feffde;
+  color: #52734d;
+  font-family: "Libre Baskerville", Baskerville, serif;
+}
+
+button {
+  background-color: #52734d;
+  border: solid;
+  border-color: #52734d;
+  border-radius: 25px;
+  color: #feffde;
+  font-family: "Libre Baskerville", Baskerville, serif;
+}
+
+button:hover {
+  background-color: #feffde;
+  border: solid;
+  border-color: #52734d;
+  color: #52734d;
+  cursor: pointer;
+}
+
+.header {
+  color: #52734d;
 }
