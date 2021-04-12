@@ -1,7 +1,16 @@
-function displayTemperature(response) {
+function displayWeather(response) {
+    let locationToUser = document.querySelector("#currentLocation");
+    locationToUser.innerHTML = response.data.name;
+
+    let weatherDescriptionToUser = document.querySelector("#weatherDescription");
+    weatherDescriptionToUser.innerHTML = response.data.weather[0].description;
+    
     let tempToUser = document.querySelector("#currentTemp");
-    tempToUser.innerHTML = response.data.main.feels_like;
-    console.log(response.data.main.feels_like);
+    tempToUser.innerHTML = Math.round(response.data.main.feels_like);
+
+    let humidityToUser = document.querySelector("#humidity");
+    humidityToUser.innerHTML = response.data.main.humidity
+
 }
 
 let apiKey = "3fdbb0c1f67069bd33e76ea8a1295d83";
@@ -11,4 +20,4 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appi
 
 console.log(apiUrl);
 
-axios.get(apiUrl).then(displayTemperature);
+axios.get(apiUrl).then(displayWeather);
