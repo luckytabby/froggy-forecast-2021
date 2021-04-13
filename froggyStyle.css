@@ -47,7 +47,7 @@ button:hover {
   color: #52734d;
 }
 
-#weatherDescription {
+p:first-letter {
   text-transform: capitalize;
 }
 
