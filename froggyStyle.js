@@ -81,9 +81,23 @@ function displayWeather(response) {
     }
 }
 
+//** Search engine */
+
+function search (city) {
+
 let apiKey = "3fdbb0c1f67069bd33e76ea8a1295d83";
-let cityName = "Gettysburg";
 let units = "metric";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${units}`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
 axios.get(apiUrl).then(displayWeather);
+
+};
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let userLocation = document.querySelector("#userLocationInput");
+    search(userLocation.value);
+};
+
+let searchForm = document.querySelector("#submitLocation");
+searchForm.addEventListener("submit", handleSubmit);
