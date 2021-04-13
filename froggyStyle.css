@@ -1,3 +1,17 @@
+a {
+  color: #91c788;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a.active {
+  color: #52734d;
+  cursor: initial;
+  text-decoration: none;
+}
+
 body {
   background-color: #91c788;
   color: #52734d;

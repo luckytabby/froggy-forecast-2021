@@ -37,9 +37,11 @@ function displayWeather(response) {
 
     let weatherDescriptionToUser = document.querySelector("#weatherDescription");
     weatherDescriptionToUser.innerHTML = response.data.weather[0].description;
+
+    celsiusTemperature = response.data.main.feels_like;
     
     let tempToUser = document.querySelector("#currentTemp");
-    tempToUser.innerHTML = Math.round(response.data.main.feels_like);
+    tempToUser.innerHTML = Math.round(celsiusTemperature);
 
     let humidityToUser = document.querySelector("#humidity");
     humidityToUser.innerHTML = Math.round(response.data.main.humidity);
@@ -101,3 +103,43 @@ function handleSubmit(event) {
 
 let searchForm = document.querySelector("#submitLocation");
 searchForm.addEventListener("submit", handleSubmit);
+
+//** Unit conversion */
+
+function showFahrenTemp(event) {
+    
+    event.preventDefault();
+
+    let displayTemp = document.querySelector("#currentTemp");
+
+    let currentFahrenTemp = (celsiusTemperature * 9)/5+ 32;
+
+    displayTemp.innerHTML = Math.round(currentFahrenTemp);
+
+    fahrenheitLink.classList.add("active");
+
+    celsiusLink.classList.remove("active");
+
+}
+
+function showCelsTemp(event) {
+
+    event.preventDefault();
+
+    let displayTemp = document.querySelector("#currentTemp");
+
+    displayTemp.innerHTML = Math.round(celsiusTemperature);
+
+    fahrenheitLink.classList.remove("active");
+
+    celsiusLink.classList.add("active");
+
+};
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahren");
+fahrenheitLink.addEventListener("click", showFahrenTemp);
+
+let celsiusLink = document.querySelector("#cels");
+celsiusLink.addEventListener("click", showCelsTemp);
