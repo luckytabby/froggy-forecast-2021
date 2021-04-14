@@ -57,13 +57,13 @@ function displayWeather(response) {
     if (weatherID === 800) {
         //** Summer froggy */
         let frogImage = document.querySelector("#frog");
-        frogImage.setAttribute("src", `src/FroggySummer.png`);
+        frogImage.setAttribute("src", `src/froggysummer.png`);
     }
 
     if (weatherID >= 801) {
         //** Standard froggy */
         let frogImage = document.querySelector("#frog");
-        frogImage.setAttribute("src", `src/Froggy.png`);
+        frogImage.setAttribute("src", `src/froggy.png`);
     }
 
     if (weatherID >= 700 && weatherID <= 781 ) {
@@ -73,13 +73,13 @@ function displayWeather(response) {
     if (weatherID >= 600 && weatherID <= 622) {
         //** Snow froggy */
         let frogImage = document.querySelector("#frog");
-        frogImage.setAttribute("src", `src/FroggyWinter.png`);
+        frogImage.setAttribute("src", `src/froggywinter.png`);
     }
 
     if (weatherID >= 200 && weatherID <= 531) {
         //** Rain froggy */
         let frogImage = document.querySelector("#frog");
-        frogImage.setAttribute("src", `src/FroggyRain.png`);
+        frogImage.setAttribute("src", `src/froggyrain.png`);
     }
 }
 
