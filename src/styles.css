@@ -47,6 +47,10 @@ button:hover {
   justify-content: center;
 }
 
+#forecastFetched {
+  font-style: italic;
+}
+
 .footer {
   background-color: #feffde;
   border: solid;
@@ -76,8 +80,24 @@ button:hover {
   text-align: center;
 }
 
+h3 {
+  font-size: 25px;
+}
+
 p:first-letter {
   text-transform: capitalize;
+}
+
+#weatherDescription {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+#weatherIcon {
+  margin: 0;
+  padding: 0;
+  max-height: 30px;
+  max-width: 30px;
 }
 
 .weekday {

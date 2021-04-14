@@ -33,7 +33,7 @@ function formatDate(timestamp) {
 
 function displayWeather(response) {
     let locationToUser = document.querySelector("#currentLocation");
-    locationToUser.innerHTML = response.data.name;
+    locationToUser.innerHTML = `  ${response.data.name}`;
 
     let weatherDescriptionToUser = document.querySelector("#weatherDescription");
     weatherDescriptionToUser.innerHTML = response.data.weather[0].description;
@@ -53,6 +53,11 @@ function displayWeather(response) {
     dateAndTimeToUser.innerHTML = formatDate(response.data.dt * 1000);
 
     let weatherID = response.data.weather[0].id;
+
+    let weatherIconID = response.data.weather[0].icon;
+
+    let weatherIcon = document.querySelector("#weatherIcon");
+    weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${weatherIconID}@2x.png`);
 
     if (weatherID === 800) {
         //** Summer froggy */
