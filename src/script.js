@@ -31,6 +31,29 @@ function formatDate(timestamp) {
     return `${formattedDay} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector(".weekdayContainer");
+
+    let forecastHTML = "";
+
+    let days = ["Thu", "Fri", "Sat"];
+
+    days.forEach(function(day) {
+
+            forecastHTML = forecastHTML + `
+            <div class="weekday">
+
+                <p id="tomorrow">${day}</p>
+                <p><span id="tomorrowMinTemp">25</span>° / <span id="tomorrowMaxTemp">50</span>°</p>
+
+            </div>
+    `;
+        
+    });
+
+    forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
     let locationToUser = document.querySelector("#currentLocation");
     locationToUser.innerHTML = `  ${response.data.name}`;
@@ -86,6 +109,8 @@ function displayWeather(response) {
         let frogImage = document.querySelector("#frog");
         frogImage.setAttribute("src", `src/froggyrain.png`);
     }
+
+    displayForecast();
 }
 
 //** Search engine */
