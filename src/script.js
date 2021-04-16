@@ -171,3 +171,52 @@ function handleSubmit(event) {
 let searchForm = document.querySelector("#submitLocation");
 searchForm.addEventListener("submit", handleSubmit);
 
+//** Geolocation */
+
+function geolocate(position) {
+
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+
+  let apiKey = "3fdbb0c1f67069bd33e76ea8a1295d83";
+  let units = "imperial"; 
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`
+    
+  axios.get(apiUrl).then(displayWeather);
+}
+
+function useNavigator(event) {
+
+event.preventDefault();
+
+navigator.geolocation.getCurrentPosition(geolocate);
+
+};
+
+let geolocateUser = document.querySelector("#geolocateUser");
+geolocateUser.addEventListener("click", useNavigator);
+
+//** Night mode */
+
+function nightModeOn() {
+
+    let body = document.querySelector("body");
+    body.classList.add("nightModeOn");
+    body.classList.remove("dayModeOn");
+
+    let container = document.querySelector(".container");
+    container.classList.add("nightModeOn");
+    container.classList.remove("dayModeOn");
+
+    let header = document.querySelector(".header");
+    header.classList.add("nightModeOn");
+    header.classList.remove("dayModeOn");
+
+    let footer = document.querySelector("#footer");
+    footer.classList.add("nightModeOn");
+    footer.classList.remove("dayModeOn");
+
+}
+
+let nightModeButton = document.querySelector("#nightMode");
+nightModeButton.addEventListener("click", nightModeOn)

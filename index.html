@@ -9,11 +9,11 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/5cddc502c9.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="dayModeOn">
 
-    <div class="container">
+    <div class="container dayModeOn">
 
-        <div class="header">
+        <div class="header dayModeOn">
           
             <h1 class="header" id="mainHeading">Froggy Forecast</h1>
           
@@ -65,16 +65,19 @@
         </div>
 
         <div class="weekdayContainer">
+
+            <!-- Weekday forecast data will populate here -->
                 
         </div>
 
     </div>
 
-    <div class="footer">
+    <div id="footer" class="footer dayModeOn">
         <div class="signature">
             <i class="fas fa-frog"></i>     Coded by 
             <a href="https://maggiegreymcd.com/" target="_blank">Maggie McDonald</a>    
             <i class="fas fa-frog"></i>    <a href="https://github.com/maggiegreymcd/froggy-forecast-2021" target="_blank">Open-Source Code</a>    <i class="fas fa-frog"></i>
+            <button type="submit" id="nightMode"><i class="fas fa-cloud-moon"></i></button>
         </div> 
 
     </div>
