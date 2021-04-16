@@ -50,10 +50,6 @@ button:hover {
   width: 800px;
 }
 
-#forecastFetched {
-  font-style: italic;
-}
-
 .footer {
   background-color: #feffde;
   border: solid;
@@ -66,6 +62,14 @@ button:hover {
   margin: 15px 0;
   padding: 10px;
   width: 800px;
+}
+
+.forecastIcon {
+  max-width: 40px;
+}
+
+#forecastFetched {
+  font-style: italic;
 }
 
 #frog {
@@ -113,4 +117,5 @@ p:first-letter {
   align-content: flex-start;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
