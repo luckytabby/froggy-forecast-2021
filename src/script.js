@@ -31,20 +31,25 @@ function formatDate(timestamp) {
     return `${formattedDay} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+    let forecast = response.data.daily;
+
     let forecastElement = document.querySelector(".weekdayContainer");
 
     let forecastHTML = "";
 
     let days = ["Thu", "Fri", "Sat"];
 
-    days.forEach(function(day) {
+    forecast.forEach(function(forecastDay) {
+
+        console.log(forecastDay);
 
             forecastHTML = forecastHTML + `
             <div class="weekday">
 
-                <p id="tomorrow">${day}</p>
-                <p><span id="tomorrowMinTemp">25</span>° / <span id="tomorrowMaxTemp">50</span>°</p>
+                <p id="tomorrow">${forecastDay.dt}</p>
+                <img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+                <p><span id="tomorrowMinTemp">${forecastDay.temp.min}</span>° / <span id="tomorrowMaxTemp">${forecastDay.temp.max}</span>°</p>
 
             </div>
     `;
@@ -53,6 +58,14 @@ function displayForecast() {
 
     forecastElement.innerHTML = forecastHTML;
 }
+
+function getForecast(coordinates) {
+    let apiKey = "3fdbb0c1f67069bd33e76ea8a1295d83";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`
+    
+    axios.get(apiUrl).then(displayForecast);
+};
 
 function displayWeather(response) {
     let locationToUser = document.querySelector("#currentLocation");
@@ -110,7 +123,7 @@ function displayWeather(response) {
         frogImage.setAttribute("src", `src/froggyrain.png`);
     }
 
-    displayForecast();
+    getForecast(response.data.coord);
 }
 
 //** Search engine */
