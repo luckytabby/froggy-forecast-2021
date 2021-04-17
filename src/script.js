@@ -216,6 +216,30 @@ function nightModeOn() {
     footer.classList.add("nightModeOn");
     footer.classList.remove("dayModeOn");
 
+    let buttons = document.querySelector("button");
+    buttons.classList.add("nightButtonModeOn");
+    buttons.classList.remove("dayButtonModeOn");
+
+    let nightModeButton = document.querySelector("#nightMode");
+    nightModeButton.classList.add("nightButtonModeOn");
+    nightModeButton.classList.remove("dayButtonModeOn");
+
+    let geolocateButton = document.querySelector("#geolocateUser");
+    geolocateButton.classList.add("nightButtonModeOn");
+    geolocateButton.classList.remove("dayButtonModeOn");
+
+    let footerButtons = document.querySelector(".footerButton");
+    footerButtons.classList.add("nightButtonModeOn");
+    footerButtons.classList.remove("dayButtonModeOn");
+
+    let openSourceButton = document.querySelector("#openSourceButton");
+    openSourceButton.classList.add("nightButtonModeOn");
+    openSourceButton.classList.remove("dayButtonModeOn");
+
+    let nightModeMoon = document.querySelector(".fa-cloud-moon");
+    nightModeMoon.classList.add("fa-cloud-sun");
+    nightModeMoon.classList.remove("fa-cloud-moon");
+
 }
 
 let nightModeButton = document.querySelector("#nightMode");

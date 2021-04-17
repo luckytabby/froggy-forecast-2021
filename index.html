@@ -13,7 +13,7 @@
 
     <div class="container dayModeOn">
 
-        <div class="header dayModeOn">
+        <div class="header">
           
             <h1 class="header" id="mainHeading">Froggy Forecast</h1>
           
@@ -28,9 +28,10 @@
                 <input id="userLocationInput" type="text" placeholder="Lilypad location" 
                 autocomplete="off" autofocus="on">
 
-                <button type="submit" id="submitUserLocation">Submit</button>
+                <button type="submit" id="submitUserLocation" class="dayButtonModeOn">Submit</button>
 
-                <button type="submit" id="geolocateUser"><i class="fas fa-search-location"></i></button>
+                <button type="submit" id="geolocateUser" class="dayButtonModeOn">
+                    <i class="fas fa-search-location"></i> Use Current Location</button>
 
             </form>
 
@@ -74,10 +75,16 @@
 
     <div id="footer" class="footer dayModeOn">
         <div class="signature">
-            <i class="fas fa-frog"></i>     Coded by 
-            <a href="https://maggiegreymcd.com/" target="_blank">Maggie McDonald</a>    
-            <i class="fas fa-frog"></i>    <a href="https://github.com/maggiegreymcd/froggy-forecast-2021" target="_blank">Open-Source Code</a>    <i class="fas fa-frog"></i>
-            <button type="submit" id="nightMode"><i class="fas fa-cloud-moon"></i></button>
+            <i class="fas fa-frog"></i> 
+            <button type="submit" class="footerButton dayButtonModeOn">
+                <i class="fas fa-laptop-code"></i> Coded by Maggie McDonald </button>
+            <i class="fas fa-frog"></i> 
+            <button type="submit" class="footerButton dayButtonModeOn" id="openSourceButton">
+                <i class="fab fa-github"></i> View Open-Source Code </button>
+            <i class="fas fa-frog"></i>
+            <button type="submit" id="nightMode" class="dayButtonModeOn">
+                <i class="fas fa-cloud-moon"></i> <span class="nightModeDayMode">Night Mode</span> </button>
+            <i class="fas fa-frog"></i>
         </div> 
 
     </div>

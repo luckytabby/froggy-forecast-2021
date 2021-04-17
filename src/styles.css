@@ -2,36 +2,46 @@ a:hover {
   cursor: pointer;
 }
 
-a.active {
-  color: #52734d;
-  cursor: initial;
-  text-decoration: none;
-}
-
 body {
   background-image: radial-gradient(#52734d 20%, #91c788 20%);
   background-position: 0 0;
   background-size: 100px 100px;
-  color: #52734d;
-  font-family: "Libre Baskerville", Baskerville, serif;
+  font-family: "Garamond", serif;
   height: 200px;
   width: 100%;
 }
 
 button {
-  background-color: #52734d;
   border: solid;
-  border-color: #52734d;
   border-radius: 25px;
-  color: #feffde;
-  font-family: "Libre Baskerville", Baskerville, serif;
+  font-family: "Garamond", serif;
 }
 
-button:hover {
+.dayButtonModeOn {
+  background-color: #52734d;
+  border-color: #52734d;
+  color: #feffde;
+}
+
+.dayButtonModeOn:hover {
   background-color: #feffde;
   border: solid;
   border-color: #52734d;
   color: #52734d;
+  cursor: pointer;
+}
+
+.nightButtonModeOn {
+  background-color: #feffde;
+  border-color: #feffde;
+  color: #52734d;
+}
+
+.nightButtonModeOn:hover {
+  background-color: #52734d;
+  border: solid;
+  border-color: #feffde;
+  color: #feffde;
   cursor: pointer;
 }
 
@@ -51,6 +61,7 @@ button:hover {
 .dayModeOn {
   background-color: #feffde;
   border-color: #52734d;
+  color: #52734d;
 }
 
 .nightModeOn {
@@ -96,6 +107,7 @@ button:hover {
 }
 
 .header {
+  font-weight: bold;
   text-align: center;
 }
 
