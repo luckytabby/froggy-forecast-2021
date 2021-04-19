@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/5cddc502c9.js" crossorigin="anonymous"></script>
 </head>
-<body class="dayModeOn">
+<body>
 
     <div class="container dayModeOn">
 
@@ -41,7 +41,7 @@
 
                 <div class="weatherFrog">
 
-                    <img src="src/froggy.png" id="frog" alt="Froggy holds an umbrella on a rainy day" />
+                    <img src="src/froggy.png" id="frog" alt="Froggy shares his forecast" />
 
                 </div>
 
@@ -51,7 +51,8 @@
 
                     <p>
                         <img src="https://openweathermap.org/img/wn/10d@2x.png" id="weatherIcon">
-                        <span id="weatherDescription">Partly Cloudy</span></p>
+                        <span id="weatherDescription">Partly Cloudy</span>
+                    </p>
 
                     <p><i class="fas fa-temperature-high"></i> Feels like <span id="currentTemp">50</span>°F</p> 
 
@@ -73,16 +74,16 @@
 
     </div>
 
-    <div id="footer" class="footer dayModeOn">
+    <div id="footer" class="dayModeOn">
         <div class="signature">
             <i class="fas fa-frog"></i> 
-            <button type="submit" class="footerButton dayButtonModeOn">
+            <button type="submit" id="signature" class="footerButton dayButtonModeOn">
                 <i class="fas fa-laptop-code"></i> Coded by Maggie McDonald </button>
             <i class="fas fa-frog"></i> 
-            <button type="submit" class="footerButton dayButtonModeOn" id="openSourceButton">
+            <button type="submit" id="openSource" class="footerButton dayButtonModeOn">
                 <i class="fab fa-github"></i> View Open-Source Code </button>
             <i class="fas fa-frog"></i>
-            <button type="submit" id="nightMode" class="dayButtonModeOn">
+            <button type="submit" id="nightMode" class="footerButton dayButtonModeOn">
                 <i class="fas fa-cloud-moon"></i> <span class="nightModeDayMode">Night Mode</span> </button>
             <i class="fas fa-frog"></i>
         </div> 

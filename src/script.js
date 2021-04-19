@@ -232,15 +232,11 @@ function nightModeOn() {
     footerButtons.classList.add("nightButtonModeOn");
     footerButtons.classList.remove("dayButtonModeOn");
 
-    let openSourceButton = document.querySelector("#openSourceButton");
+    let openSourceButton = document.querySelector("#openSource");
     openSourceButton.classList.add("nightButtonModeOn");
     openSourceButton.classList.remove("dayButtonModeOn");
-
-    let nightModeMoon = document.querySelector(".fa-cloud-moon");
-    nightModeMoon.classList.add("fa-cloud-sun");
-    nightModeMoon.classList.remove("fa-cloud-moon");
 
 }
 
 let nightModeButton = document.querySelector("#nightMode");
-nightModeButton.addEventListener("click", nightModeOn)
+nightModeButton.addEventListener("click", nightModeOn);
