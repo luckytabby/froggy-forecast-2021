@@ -240,3 +240,17 @@ function nightModeOn() {
 
 let nightModeButton = document.querySelector("#nightMode");
 nightModeButton.addEventListener("click", nightModeOn);
+
+//** Footer */
+
+function contact() {
+    window.open(
+        "https://maggiegreymcd.com/", "_blank"
+    );
+}
+
+function viewCode() {
+    window.open(
+        "https://github.com/maggiegreymcd", "_blank"
+    );
+}
